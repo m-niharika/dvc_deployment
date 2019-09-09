@@ -16,7 +16,7 @@ app = flask.Flask(__name__)
 port = int(os.getenv("PORT", 9999))
 model_file = conf.model
 
-with open('model_file', 'rb') as f:
+with open(model_file, 'rb') as f:
     u = pickle._Unpickler(f)
     u.encoding = 'latin1'
     model = u.load()
