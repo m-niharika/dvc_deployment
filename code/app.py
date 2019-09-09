@@ -9,12 +9,14 @@ from pandas._libs import json
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.metrics import precision_recall_curve
+import conf
 
 
 app = flask.Flask(__name__)
 port = int(os.getenv("PORT", 9999))
+model_file = conf.model
 
-with open('../data/model.p', 'rb') as f:
+with open('model_file', 'rb') as f:
     u = pickle._Unpickler(f)
     u.encoding = 'latin1'
     model = u.load()
