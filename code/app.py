@@ -50,7 +50,7 @@ def predict():
     auc = metrics.auc(recall, precision)
     response = {'prediction': predictions}
 
-    return json.dumps(response)
+    return json.dumps(auc)
 
 
 def get_df(input):
