@@ -21,7 +21,7 @@ labels = matrix[:, 1].toarray()
 x = matrix[:, 2:]
 
 predictions_by_class = model.predict_proba(x)
-pred = model.predict()
+
 predictions = predictions_by_class[:,1]
 
 precision, recall, thresholds = precision_recall_curve(labels, predictions)
