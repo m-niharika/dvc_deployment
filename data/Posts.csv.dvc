@@ -1,0 +1,8 @@
+md5: eb7e9778ab2fe23bfd369a855cc6d80d
+wdir: ..
+outs:
+- md5: b85142deced5c75b772703d9c36ee94b
+  path: data/Posts.csv
+  cache: true
+  metric: false
+  persist: false
